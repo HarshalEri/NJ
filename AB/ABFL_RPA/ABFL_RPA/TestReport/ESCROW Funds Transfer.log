@@ -1,0 +1,11 @@
+08-07-2017 10:59:00 INFO  - ABFL Logs :  - Launch Browser
+ 08-07-2017 10:59:01 INFO  - ABFL :  - Step 1. Read account number in received excel file from email
+ 08-07-2017 10:59:03 INFO  - ABFL :  - Step 2. Check an Escrow Account Number availability for online transaction
+ 08-07-2017 10:59:03 INFO  - ABFL :  - Step 3. Search Beneficiary A/c Number (from Email) in the Beneficiary Excel Master File
+ 08-07-2017 10:59:03 INFO  - ABFL :  - Step 4 : CPU user will prepare an upload file
+ 08-07-2017 10:59:08 INFO  - ABFL :  - Step 5 : Navigate to kotak net banking url
+ 08-07-2017 10:59:09 INFO  - ABFL :  - Step 6 : Login to kotak net banking
+ 08-07-2017 10:59:09 INFO  - ABFL :  - Step 7 : Go to CMS netIT > File Upload > Import instruction
+ 08-07-2017 10:59:09 INFO  - ABFL :  - Step 8 : Click F3 button till file gets uploaded
+
+ 

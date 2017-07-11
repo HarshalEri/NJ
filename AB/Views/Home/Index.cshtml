@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Reporting Dashboard";
+}
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<link href="~/Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="col-md-12 col-lg-12">
+    <div class="container" style="margin-top:10px">
+        <table class="table table-responsive table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Process Name</th>
+                    <th>Last Execution Date</th>
+                    <th>Last Execution Result</th>
+                    <th>Process Logs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdCheckedProcess"><input class="inpCheckedProcess" type="checkbox" /></td>
+                    <td class="tdProcessName">ESCROW Funds Transfer</td>
+                    <td class="tdLastExecutiondate">02/07/2017</td>
+                    <td class="tdLastResult" style="color:green">Pass</td>
+                    <td class="tdLogFileLink"><a class="viewLogLink" href="#">View Logs</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" id="runProcess" class="btn btn-primary">Run</button>
+        <button type="button" class="btn btn-primary">Stop</button>
+        <button type="button" id="btnViewReports" class="btn btn-primary">View Reports</button>
+    </div>
+
+    <div class="container" style="border:thin;margin-top:10px;max-height:300px;overflow:auto">
+        <div id="parentLogDiv" class="well" style="display:none;overflow:hidden;">
+            <div id="logDiv" class="col-lg-12 col-md-12">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:10px">
+        <div class="col-lg-12 col-md-12 well">
+            <div class="col-lg-12 col-md-12">
+                <h4>Schedule Process</h4>
+                <div class="col-lg-4">
+                    Select Process:&nbsp;<select id="processToSchedule" class="form-control" multiple size="2">
+                        <option>Process 1</option>
+                        <option>Process 2</option>
+                    </select>
+                </div>
+                <div class="col-lg-4">
+                    Schedule Date:
+                    <input id="ScheduleDate" class="form-control" type="text" />
+                </div>
+                <div class="col-lg-4">
+                    Schedule Time:
+                    <input id="ScheduleTime" class="form-control" type="text" />
+                    
+                </div>
+           </div>
+            <div>
+                <button type="button" class="col-lg-offset-8 btn btn-primary" style="float:right">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#ScheduleDate').css('cursor', 'pointer');
+    $('#ScheduleDate').datepicker({
+        showOptions: { speed: 'fast' },
+        changeMonth: true,
+        changeYear: true,
+        format: 'dd/mm/yyyy',
+        startDate: new Date(),
+        minDate: 0
+    }).on('changeDate', function () {
+
+    })
+    $('#ScheduleDate').datepicker('setDate', new Date());
+
+    $(document).ready(function(){
+
+        var processName;
+        $('.viewLogLink').on('click', function () {
+            debugger;
+            processName =  $(this).closest('tr').find('td.tdProcessName').html();
+            var logFileName = processName + ".log";
+            $.ajax({
+                type: "POST",
+                url: "/Home/GetLogs",
+                data: {fileName: logFileName},
+                dataType: "JSON",
+                success: function (result) {
+                    $('#logDiv').html(result);
+                    $('#parentLogDiv').show();
+                },
+                error: function () { }
+            })
+        })
+
+
+        $('#btnViewReports').on('click', function () {
+            var checkedProcesses = $('.inpCheckedProcess:checked').first().closest('tr').find('td.tdProcessName').html();;
+            var htmlReportFileName = checkedProcesses + ".html";
+            window.open('@Url.Content("~/ABFL_RPA/ABFL_RPA/TestReport/")' + htmlReportFileName.replace(" ", "%20"));
+        
+        })
+
+
+        $('#runProcess').on('click', function () {
+            debugger;
+            //var processName = $(this).closest('tr').find('td.tdProcessName').html();
+            //var logFileName = processName + ".log";
+            $.ajax({
+                type: "POST",
+                url: "/Home/ExecuteBatch",
+                data: { processName: 'hello' },
+                dataType: "JSON",
+                success: function (result) {
+                    alert("success");
+                },
+                error: function () { }
+            })
+        })
+
+
+        setInterval(function () {
+            debugger;
+            if (processName != undefined) {
+                var logFileName = processName + ".log";
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/GetLogs",
+                    data: { fileName: logFileName },
+                    dataType: "JSON",
+                    success: function (result) {
+                        $('#logDiv').html(result);
+                        //$('#parentLogDiv').show();
+                    },
+                    error: function () { }
+                })
+            }
+        }, 5000);
+    })
+    
+</script>
