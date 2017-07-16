@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+	<Element title="eCoordinatorHomePageFrame">
+		<xpath>//frame[contains(@title,'eCoordinator')]</xpath>
+	</Element>
+	<Element title="tagframe">
+		<tagName>iframe</tagName>
+	</Element>
+	<Element title="FrameTag">
+		<xpath>//iframe[@id="mce_editor_0"]</xpath>
+	</Element>
+	<Element title="RMSFrame">
+		<xpath>//iframe[@id="rms-main-frame"]</xpath>
+	</Element>
+	<Element title="RMSAccountManager">
+		<xpath>//iframe[@id="account-mamager-frame"]</xpath>
+	</Element>
+	<Element title="RMSMainFrame">
+		<xpath>//iframe[@id="main-frame"]</xpath>
+	</Element>
+	<Element title="SimpleFrame">
+		<tagName>frame</tagName>
+	</Element>
+	<Element title="WebDialogPopUp">
+		<xpath>//div[contains(@class,"jdialog")]</xpath>
+	</Element>
+	<Element title="WebDialogPopUpText">
+		<xpath>//div[contains(@id,"jdialog")]</xpath>
+	</Element>
+	<Element title="WebDialogPopUpButtons">
+		<xpath>//div[@class = 'ui-dialog-buttonset']//*[contains(text(),'#')]</xpath>
+	</Element>	
+</Elements>

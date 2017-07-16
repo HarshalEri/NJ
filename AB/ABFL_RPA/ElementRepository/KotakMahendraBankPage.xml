@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+	<Element title="LoginLink">
+		<xpath>//a[@class=' login']</xpath>
+	</Element>
+	<Element title="LoginPageTitle">
+		<pagetitle>KMBL Net Banking Login</pagetitle>
+	</Element>
+	<Element title="UserIDTxtBox">
+		<xpath>//input[@id="Username"]</xpath>
+	</Element>
+	<Element title="PasswordTxtBox">
+		<xpath>//input[@id="Password"]</xpath>
+	</Element>
+	<Element title="SecureLoginBtn">
+		<xpath>//span[contains(text(),'Secure Login')]//parent::a[@id='secBtn2']</xpath>
+	</Element>
+	<Element title="CMSnetITMenuOption">
+		<xpath>//a[contains(text(),'CMS netIT')]</xpath>
+	</Element>
+	<Element title="FileUploadMenu">
+		<xpath>//a[contains(text(),'File Upload')]</xpath>
+	</Element>
+	<Element title="ImportInstructionSubMenu">
+		<xpath>//a[contains(text(),'Import Instruction')]</xpath>
+	</Element>
+	<Element title="ChooeseFileButton">
+		<xpath>//input[@id="upload"]</xpath>
+	</Element>
+	<Element title="Logout">
+		<xpath>//a[@id='logout']</xpath>
+	</Element>
+</Elements>
