@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" style="margin-left:!important 10px">
+            <div class="navbar-header">
+                <h2>Aditya Birla</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="" style="margin-top:20px">
+        @Html.BeginForm("Index", "Home")
+        {
+        <div class="well">
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 col-sm-6">
+                    @Html.Label("Username")
+                    @Html.TextBox("UID", "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 col-sm-6">
+                    @Html.Label("Password")
+                    @Html.TextBox("PWD", "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+        }
+    </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
         {"ProcessName": "ESCROW Funds Transfer", "ExecutionStatus": "Passed", "ExecutionTime": "100secs"},
         {"ProcessName": "Process_2", "ExecutionStatus": "In-Progress", "ExecutionTime": "160secs"},
         {"ProcessName": "Process_3", "ExecutionStatus": "Failed", "ExecutionTime": "60secs"},
-        {"ProcessName": "Process_4", "ExecutionStatus": "Passed", "ExecutionTime": "60secs"}
+        {"ProcessName": "Process_4", "ExecutionStatus": "Passed", "ExecutionTime": "60secs"},
 		{"ProcessName": "Process_5", "ExecutionStatus": "Not Started", "ExecutionTime": "160secs"},
         {"ProcessName": "Process_6", "ExecutionStatus": "Failed", "ExecutionTime": "60secs"},
         {"ProcessName": "Process_7", "ExecutionStatus": "Not Started", "ExecutionTime": "60secs"}

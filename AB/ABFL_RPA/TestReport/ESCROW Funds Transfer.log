@@ -1,13 +1,13 @@
-17-07-2017 23:07:24 INFO  - ABFL :  - Launch Browser
- 17-07-2017 23:07:24 INFO  - ABFL :  - ESCROW Funds Transfer process started
- 17-07-2017 23:07:25 INFO  - ABFL :  - Step 1. Read account number in received excel file from email
- 17-07-2017 23:07:27 INFO  - ABFL :  - Step 2. Check an Escrow Account Number availability for online transaction
- 17-07-2017 23:07:27 INFO  - ABFL :  - Step 3. Search Beneficiary A/c Number (from Email) in the Beneficiary Excel Master File
- 17-07-2017 23:07:27 INFO  - ABFL :  - Step 4 : CPU user will prepare an upload file
- 17-07-2017 23:07:33 INFO  - ABFL :  - Step 5 : Navigate to kotak net banking url
- 17-07-2017 23:07:42 INFO  - ABFL :  - Step 6 : Login to kotak net banking
- 17-07-2017 23:07:56 INFO  - ABFL :  - Step 7 : Go to CMS netIT > File Upload > Import instruction
- 17-07-2017 23:08:02 INFO  - ABFL :  - Step 8 : Upload file
- 17-07-2017 23:08:08 INFO  - ABFL :  - Step 9 : Click F11 button till file gets uploaded
- 17-07-2017 23:08:16 INFO  - ABFL :  - ESCROW Funds Transfer process completed successfully
+18-07-2017 00:04:31 INFO  - ABFL :  - Launch Browser
+ 18-07-2017 00:04:31 INFO  - ABFL :  - ESCROW Funds Transfer process started
+ 18-07-2017 00:04:32 INFO  - ABFL :  - Step 1. Read account number in received excel file from email
+ 18-07-2017 00:04:34 INFO  - ABFL :  - Step 2. Check an Escrow Account Number availability for online transaction
+ 18-07-2017 00:04:34 INFO  - ABFL :  - Step 3. Search Beneficiary A/c Number (from Email) in the Beneficiary Excel Master File
+ 18-07-2017 00:04:34 INFO  - ABFL :  - Step 4 : CPU user will prepare an upload file
+ 18-07-2017 00:04:40 INFO  - ABFL :  - Step 5 : Navigate to kotak net banking url
+ 18-07-2017 00:04:47 INFO  - ABFL :  - Step 6 : Login to kotak net banking
+ 18-07-2017 00:05:00 INFO  - ABFL :  - Step 7 : Go to CMS netIT > File Upload > Import instruction
+ 18-07-2017 00:05:07 INFO  - ABFL :  - Step 8 : Upload file
+ 18-07-2017 00:05:13 INFO  - ABFL :  - Step 9 : Click F11 button till file gets uploaded
+ 18-07-2017 00:05:20 INFO  - ABFL :  - ESCROW Funds Transfer process completed successfully
  

@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -103,9 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -167,54 +168,101 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ModelClasses\LOBModel.cs" />
+    <Compile Include="Models\ViewModels\DashboardViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ABFL_RPA\ABFL_RPA\build.xml" />
-    <Content Include="ABFL_RPA\ABFL_RPA\Drivers\chromedriver.exe" />
-    <Content Include="ABFL_RPA\ABFL_RPA\Drivers\IEDriverServer.exe" />
-    <Content Include="ABFL_RPA\ABFL_RPA\Drivers\MicrosoftWebDriver.exe" />
-    <Content Include="ABFL_RPA\ABFL_RPA\ElementRepository\CommonUI.xml" />
-    <Content Include="ABFL_RPA\ABFL_RPA\ElementRepository\KotakMahendraBankPage.xml" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\activation-1.1.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\commons-codec-1.9.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\commons-collections4-4.0.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\commons-lang3-3.4.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\dsn.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\imap.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\javacsv-2.0.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\junit-4.11.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\log4j-1.2.17.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\mailapi.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-examples-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-excelant-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-ooxml-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-ooxml-schemas-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\poi-scratchpad-3.16.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\selenium-server-standalone-2.53.0.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\smtp.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\sqlite-jdbc-3.8.11.2.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\stax-api-1.0.1.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\xmlbeans-2.6.0.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\lib\xstream-1.4.9.jar" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\page\KotakMahendraBankPage.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\report\GenerateReport.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\testscripts\DemoScript.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\testscripts\EscrowFundTransaction.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\BrowserDriver.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\CommonUI.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\ElementController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\EmailController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\ExcelFileController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\Log4J.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\LogController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\ReportController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\TestDataController.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\src\com\abfl\automation\utilities\XmlReaderWriter.java" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TestReport\ESCROW Funds Transfer.html" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\732017344.txt" />
+    <Content Include="ABFL_RPA\.classpath" />
+    <Content Include="ABFL_RPA\.project" />
+    <Content Include="ABFL_RPA\.settings\org.eclipse.jdt.core.prefs" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\page\KotakMahendraBankPage.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\steps\EscrowFundsTransferSteps.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\testscripts\DemoScript.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\testscripts\EscrowFundTransaction.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\BrowserDriver.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\CommonUI.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\ElementController.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\EmailController.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\ExcelFileController.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\Log4J.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\LogController.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\TestDataController.class" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\utilities\XmlReaderWriter.class" />
+    <Content Include="ABFL_RPA\build.xml" />
+    <Content Include="ABFL_RPA\build\com\abfl\automation\page\KotakMahendraBankPage.class" />
+    <Content Include="ABFL_RPA\build\com\abfl\automation\steps\EscrowFundsTransferSteps.class" />
+    <Content Include="ABFL_RPA\build\com\abfl\automation\testscripts\ESCROWFundsTransfer.class" />
+    <Content Include="ABFL_RPA\build\com\abfl\automation\utilities\BrowserDriver.class" />
+    <Content Include="ABFL_RPA\Drivers\chromedriver.exe" />
+    <Content Include="ABFL_RPA\Drivers\IEDriverServer.exe" />
+    <Content Include="ABFL_RPA\Drivers\MicrosoftWebDriver.exe" />
+    <Content Include="ABFL_RPA\ElementRepository\._chromedriver.exe1316391761618963902.tmp" />
+    <Content Include="ABFL_RPA\ElementRepository\._chromedriver.exe468249250488085019.tmp" />
+    <Content Include="ABFL_RPA\ElementRepository\CommonUI.xml" />
+    <Content Include="ABFL_RPA\ElementRepository\KotakMahendraBankPage.xml" />
+    <Content Include="ABFL_RPA\ElementRepository\log4j.properties" />
+    <Content Include="ABFL_RPA\executeProcess.bat" />
+    <Content Include="ABFL_RPA\lib\activation-1.1.jar" />
+    <Content Include="ABFL_RPA\lib\commons-codec-1.9.jar" />
+    <Content Include="ABFL_RPA\lib\commons-collections4-4.1.jar" />
+    <Content Include="ABFL_RPA\lib\commons-lang3-3.4.jar" />
+    <Content Include="ABFL_RPA\lib\dsn.jar" />
+    <Content Include="ABFL_RPA\lib\extentreports-java-2.40.0.jar" />
+    <Content Include="ABFL_RPA\lib\freemarker-2.3.23.jar" />
+    <Content Include="ABFL_RPA\lib\imap.jar" />
+    <Content Include="ABFL_RPA\lib\javacsv-2.0.jar" />
+    <Content Include="ABFL_RPA\lib\junit-4.11.jar" />
+    <Content Include="ABFL_RPA\lib\log4j-1.2.17.jar" />
+    <Content Include="ABFL_RPA\lib\mailapi.jar" />
+    <Content Include="ABFL_RPA\lib\poi-3.16.jar" />
+    <Content Include="ABFL_RPA\lib\poi-excelant-3.16.jar" />
+    <Content Include="ABFL_RPA\lib\poi-ooxml-3.16.jar" />
+    <Content Include="ABFL_RPA\lib\poi-ooxml-schemas-3.16.jar" />
+    <Content Include="ABFL_RPA\lib\poi-scratchpad-3.16.jar" />
+    <Content Include="ABFL_RPA\lib\selenium-server-standalone-2.53.0.jar" />
+    <Content Include="ABFL_RPA\lib\smtp.jar" />
+    <Content Include="ABFL_RPA\lib\sqlite-jdbc-3.8.11.2.jar" />
+    <Content Include="ABFL_RPA\lib\stax-api-1.0.1.jar" />
+    <Content Include="ABFL_RPA\lib\xmlbeans-2.6.0.jar" />
+    <Content Include="ABFL_RPA\lib\xstream-1.4.9.jar" />
+    <Content Include="ABFL_RPA\Report\html\all-tests.html" />
+    <Content Include="ABFL_RPA\Report\html\allclasses-frame.html" />
+    <Content Include="ABFL_RPA\Report\html\com\abfl\automation\testscripts\0_ESCROWFundsTransfer-err.html" />
+    <Content Include="ABFL_RPA\Report\html\com\abfl\automation\testscripts\0_ESCROWFundsTransfer.html" />
+    <Content Include="ABFL_RPA\Report\html\com\abfl\automation\testscripts\package-frame.html" />
+    <Content Include="ABFL_RPA\Report\html\com\abfl\automation\testscripts\package-summary.html" />
+    <Content Include="ABFL_RPA\Report\html\overview-summary.html" />
+    <Content Include="ABFL_RPA\Report\TESTS-TestSuites.xml" />
+    <Content Include="ABFL_RPA\Report\xml\Samaritan-UIAutomation.xml" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\page\KotakMahendraBankPage.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\steps\EscrowFundsTransferSteps.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\testscripts\ESCROWFundsTransfer.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\BrowserDriver.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\CommonUI.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\ElementController.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\EmailController.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\ExcelFileController.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\Log4J.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\LogController.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\TestDataController.java" />
+    <Content Include="ABFL_RPA\src\com\abfl\automation\utilities\XmlReaderWriter.java" />
+    <Content Include="ABFL_RPA\TestData\ESCROWFundsTransfer.properties" />
+    <Content Include="ABFL_RPA\TestJsons\Capital Market Group%28CMG%29.json" />
+    <Content Include="ABFL_RPA\TestJsons\LOB_List.json" />
+    <Content Include="ABFL_RPA\TestReport\ESCROWFundsTransfer.html" />
+    <Content Include="ABFL_RPA\TransactionalDocs\.~lock.Master Escrow.xlsx#" />
+    <Content Include="ABFL_RPA\TransactionalDocs\.~lock.Upload Format.xlsx#" />
+    <Content Include="ABFL_RPA\TransactionalDocs\732017344.txt" />
+    <Content Include="ABFL_RPA\TransactionalDocs\732017344.xls" />
+    <Content Include="ABFL_RPA\TransactionalDocs\BenifiaryExcelMaster.xlsx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\Detailed_functional_docs.docx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\Escrow_Instructions_format.xlsx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\Kotak.docx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\Master Escrow.xlsx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\RPA_at_ABFL.pptx" />
+    <Content Include="ABFL_RPA\TransactionalDocs\Upload Format.xlsx" />
     <Content Include="Content\bootstrap-datepicker.css" />
     <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap-datepicker.standalone.css" />
@@ -227,7 +275,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="ESCROW Funds Transfer.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -252,41 +299,12 @@
     <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
     <Content Include="Content\bootstrap-datepicker.min.css.map" />
     <Content Include="Content\bootstrap-datepicker.css.map" />
-    <Content Include="ABFL_Automation.log" />
-    <Content Include="ESCROW Funds Transfer.log" />
-    <Content Include="EscrowFundTransactionLogs.csv" />
-    <Content Include="ABFL_RPA\ABFL_RPA\.classpath" />
-    <Content Include="ABFL_RPA\ABFL_RPA\.project" />
-    <Content Include="ABFL_RPA\ABFL_RPA\.settings\org.eclipse.jdt.core.prefs" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\page\KotakMahendraBankPage.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\report\GenerateReport.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\testscripts\DemoScript.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\testscripts\EscrowFundTransaction.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\BrowserDriver.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\CommonUI.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\ElementController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\EmailController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\ExcelFileController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\Log4J.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\LogController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\ReportController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\TestDataController.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\bin\com\abfl\automation\utilities\XmlReaderWriter.class" />
-    <Content Include="ABFL_RPA\ABFL_RPA\ElementRepository\._chromedriver.exe1316391761618963902.tmp" />
-    <Content Include="ABFL_RPA\ABFL_RPA\ElementRepository\._chromedriver.exe468249250488085019.tmp" />
-    <Content Include="ABFL_RPA\ABFL_RPA\ElementRepository\log4j.properties" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TestData\EscrowFundTransaction.properties" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TestReport\ABFL_Automation.log" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TestReport\ESCROW Funds Transfer.log" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TestReport\EscrowFundTransactionLogs.csv" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\732017344.xls" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\BenifiaryExcelMaster.xlsx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\Detailed_functional_docs.docx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\Escrow_Instructions_format.xlsx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\Kotak.docx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\Master Escrow.xlsx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\RPA_at_ABFL.pptx" />
-    <Content Include="ABFL_RPA\ABFL_RPA\TransactionalDocs\Upload Format.xlsx" />
+    <Content Include="ABFL_RPA\bin\com\abfl\automation\testscripts\ESCROWFundsTransfer.class" />
+    <Content Include="ABFL_RPA\TestJsons\Corporate Finance Group %28CFG%29.json" />
+    <Content Include="ABFL_RPA\TestJsons\Digital.json" />
+    <Content Include="ABFL_RPA\TestJsons\Retail Asset%28RA%29.json" />
+    <Content Include="ABFL_RPA\TestJsons\Wealth.json" />
+    <Content Include="ABFL_RPA\TestReport\ESCROW Funds Transfer.log" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -404,6 +422,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
