@@ -1,9 +1,7 @@
-{
-	"All LOB" : [
-	"Capital Market Group(CMG)",
-	"Corporate Finance Group (CFG)",
-	"Retail Asset(RA)",
-	"Wealth",
-	"Digital"
-	]
-}
+[
+ "Capital Market Group(CMG)",
+ "Corporate Finance Group (CFG)",
+ "Retail Asset(RA)",
+ "Wealth",
+ "Digital"
+]

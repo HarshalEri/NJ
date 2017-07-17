@@ -15,7 +15,7 @@
 	<target name="init">
 		<delete dir="${Builddir}"/>
 		<mkdir dir="${Builddir}"/>
-		<delete file="${Basedir}/TestReport/ABFL_Automation.log"/>
+		<delete file="${Basedir}/TestReport/ESCROW Funds Transfer.log"/>
 		<delete>
 			<fileset dir="${Basedir}/TestReport/">
 				<exclude name="logo.png"/>
@@ -26,11 +26,11 @@
 	
 	<target name="process-config" depends="init">
 		<echo message="Executing process ${processName}"/>
-		<propertyfile
+		<!-- <propertyfile
 		  	  file="${Basedir}/TestReport/${processName}.properties"
 		  	  comment="${processName}.properties">
 				<entry  key="Browser" value="${Browser}"/>
-		</propertyfile>
+		</propertyfile> -->
 	</target>
 
 	<target name="compile" depends="process-config">

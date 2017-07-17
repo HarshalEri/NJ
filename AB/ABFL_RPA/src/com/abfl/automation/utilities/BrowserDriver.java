@@ -46,9 +46,16 @@ public class BrowserDriver {
 				case "ie":
 					killBrowserInstance();
 					DesiredCapabilities dCap = DesiredCapabilities.internetExplorer();
-					dCap.setCapability("enablePersistentHover", false);
+					dCap.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, false);
+					dCap.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, false);
+					dCap.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+					dCap.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+					dCap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+
+					//dCap.setCapability("enablePersistentHover", false);
 					dCap.setJavascriptEnabled(true);
-					System.setProperty("webdriver.ie.driver", testDataController.baseDirPath + "\\Drivers\\IEDriverServer.exe");
+					//dCap.setCapability("ignoreZoomSetting", true);
+					System.setProperty("webdriver.ie.driver", testDataController.baseDirPath + "\\ElementRepository\\IEDriverServer.exe");
 					driver = new InternetExplorerDriver(dCap);
 					break;
 					

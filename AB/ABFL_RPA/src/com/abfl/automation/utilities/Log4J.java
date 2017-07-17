@@ -22,6 +22,10 @@ public class Log4J {
 	public static void setLog4JProperties() {
 		testDataController = new TestDataController();
 		PropertyConfigurator.configure(".\\ElementRepository\\log4j.properties");		
+		
+		/*SimpleLayout layout = new SimpleLayout();    
+	      FileAppender appender = new FileAppender(layout,"your filename",false);    
+	      logger.addAppender(appender);*/
 	}
 	
 	/**

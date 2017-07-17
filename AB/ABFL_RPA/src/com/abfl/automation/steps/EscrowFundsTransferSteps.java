@@ -1,5 +1,10 @@
 package com.abfl.automation.steps;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -32,7 +37,6 @@ public class EscrowFundsTransferSteps {
 				// Get Column cell number of column
 				for (int cellNum = 0; cellNum < currentRow.getLastCellNum(); cellNum++){
 					XSSFCell currentColumn = currentRow.getCell(cellNum); //
-					System.out.println(currentColumn.getStringCellValue().toString());
 					if(currentColumn.getStringCellValue().toString().equalsIgnoreCase(columnName)){
 						return cellNum;
 					}
@@ -55,7 +59,6 @@ public class EscrowFundsTransferSteps {
 			if (currentRow == null) continue;
 		
 			XSSFCell currentColumn = currentRow.getCell(columnNo); //Escrow Ac no
-			System.out.println(currentColumn.getStringCellValue().toString());
 			if(currentColumn.getStringCellValue().toString().equalsIgnoreCase(accNumber)){
 				return true;
 			}
@@ -100,5 +103,27 @@ public class EscrowFundsTransferSteps {
 			
 		}
 		return null;
+	}
+
+	public void prepareUploadFileFormat(String beneficiaryCode, String filePath) {
+		try {
+			/*BufferedReader br = new BufferedReader(new FileReader(filePath));
+			try {
+			    StringBuilder sb = new StringBuilder();
+			    String line = br.readLine();
+
+			    while (line != null) {
+			        sb.append(line);
+			        sb.append(System.lineSeparator());
+			        line = br.readLine();
+			    }
+			 //String everything = sb.toString();
+			} finally {
+			    br.close();
+			}*/
+		} catch (Exception exception) {
+			
+		}
+		
 	}
 }
